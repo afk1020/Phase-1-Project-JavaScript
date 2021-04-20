@@ -1,1 +1,40 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "utf-8" > 
+    <title> Nasa Image of the Day </title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script defer type="text/javascript" src="index.js"></script>
+</head>
+<body>
+    <!--logo-->
+    <img class="logo" src="https://www.nasa.gov/sites/default/files/thumbnails/image/nasa-logo-web-rgb.png" alt ="NASA logo" width="500" height="300"/>
+    <header>
+        <h1>Nasa Image of the Day</h1>
+    </header>
+    <div>
+    <form class="date-form" >
+        <label for="date">date:</label>
+        <input type="date" id="date-input"><br><br>
+        <input type="submit" class="submit" value="submit">
+    </form>
+    </div>
+    <div class="image">
+        <div class="image-card">
+          <img src="" alt="NASA image of the day" class="image"/> 
+          <p class="explanation"></p>
+          <div class="stars-section">
+            <span class="stars">0 stars</span>
+            <button class="stars-button">&#11088;</button>
+    </div>
+    <ul class="comments">Comments</ul>
+    <form class="comment-form">
+    <input
+    class="comment-input"
+    type="text"
+    name="comment"
+    placeholder="Add a comment..."
+    />
+    <button class="comment-button" type="submit">Post</button>
+</body>
+</html>
