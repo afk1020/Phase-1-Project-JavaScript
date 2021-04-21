@@ -56,25 +56,40 @@ function postNasa(card){
 } 
  
 };
+//works up to this point
+
 imageURL= "http://localhost:3000/images/"
 fetch(imageURL)
 .then((response)=>response.json())
-.then((nasaArray) => nasaArray.forEach((nasaCard)=>renderNasa(nasaCard)));
+.then(handleData)
+
+function handleData(cards){
+    cards.forEach(renderNasa)
+}
 
 function renderNasa(nasaCard){
-    let nasaBox = document.querySelector('#nasa-collection');
-    let imageCard = document.createElement('div')
-    childDiv.className = "card"
+    const childDiv = document.createElement('div')
+    childDiv.className ="card"
     document.querySelector('#nasa-collection').appendChild(childDiv)
-  
+    
     let h2 = document.createElement('h2')
     h2.innerText =nasaCard.date
-    
+    console.log(nasaCard.date)
+
     let img = document.createElement('img')
     img.src= nasaCard.hdurl
+    img.className = "nasa-avatar"
+
+//     if(nasaCard.image == "image"){
+//         document.querySelector('.image').src = nasaCard.hdurl;
+//    }
+//    else{
+//    let embed = document.querySelector('embed')
+//        embed.src = nasaCard.url
+//        embed.style.display = "block"
+//    }
     
-    imageCard.append(h2,img)
-    nasaBox.appendChild(imageCard)
+    childDiv.append(h2,img);
 
 }
 postNasa(renderNasa)

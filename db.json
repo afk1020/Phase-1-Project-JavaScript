@@ -66,6 +66,13 @@
       "explanation": "If you were floating above the Earth right now, this is what you might see. Two weeks ago, the robotic SpaceX Dragon capsule that delivered supplies to the Earth-orbiting International Space Station (ISS) also delivered High Definition Earth Viewing (HDEV) cameras that take and transmit live views of Earth. Pictured above, when working, is the live video feed that switches between four cameras, each pointed differently. Watch white clouds, tan land, and blue oceans drift by.  The above video will appear black when it is nighttime on the Earth below, but the space station's rapid 90-minute orbit compresses this dark time into only 45 minutes.  The present location of the ISS above the Earth can be found on the web. If the video appears gray, this indicates that the view is either being switched between cameras, or communications with the ISS is temporarily unavailable.  As the HDEV project continues, video quality will be monitored to assess the effects of high energy radiation, which types of cameras work best, and which Earth views are the most popular. Although this feed will eventually be terminated, lessons learned will enable better cameras to be deployed to the ISS in the future, likely returning even more interesting live feeds.",
       "image": "video",
       "id": 10
+    },
+    {
+      "date": "2010-04-15",
+      "explanation": "Spiral galaxy NGC 4651 is a mere 35 million light-years distant, toward the well-groomed constellation Coma Berenices. About 50 thousand light-years across, this galaxy is seen to have a faint umbrella-shaped structure (right) that seems to extend some 50 thousand light-years farther, beyond the bright galactic disk. The giant cosmic umbrella is now known to be composed of tidal star streams. The streams themselves are extensive trails of stars gravitationally stripped from a smaller satellite galaxy that was eventually torn apart. Placing your cursor over the image will superimpose a simulation of the satellite galaxy's path as it was disrupted and absorbed into NGC 4651. Recent work by a remarkable collaboration of amateur and professional astronomers to image faint structures around bright galaxies suggests that even in nearby galaxies, such tidal star streams are common. The result is predicted by models of galaxy formation, including the formation of our Milky Way.",
+      "hdurl": "https://apod.nasa.gov/apod/image/1004/ngc4651_gabany.jpg",
+      "image": "image",
+      "id": 11
     }
   ],
   "comments": [
