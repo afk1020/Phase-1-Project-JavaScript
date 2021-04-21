@@ -54,7 +54,31 @@ function postNasa(card){
     .then((response)=>response.json())
     .then((postedCard)=>nasa(postedCard));
 } 
-}; 
+ 
+};
+imageURL= "http://localhost:3000/images/"
+fetch(imageURL)
+.then((response)=>response.json())
+.then((nasaArray) => nasaArray.forEach((nasaCard)=>renderNasa(nasaCard)));
+
+function renderNasa(nasaCard){
+    let nasaBox = document.querySelector('#nasa-collection');
+    let imageCard = document.createElement('div')
+    childDiv.className = "card"
+    document.querySelector('#nasa-collection').appendChild(childDiv)
+  
+    let h2 = document.createElement('h2')
+    h2.innerText =nasaCard.date
+    
+    let img = document.createElement('img')
+    img.src= nasaCard.hdurl
+    
+    imageCard.append(h2,img)
+    nasaBox.appendChild(imageCard)
+
+}
+postNasa(renderNasa)
+
 // const localURL ="http://localhost:3000/images"
 // fetch(localURL)
 // .then(res => res.json())
