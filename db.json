@@ -4,35 +4,67 @@
       "id": 1,
       "date": "2021-04-19",
       "explanation": "What does the center of our galaxy look like?  In visible light, the Milky Way's center is hidden by clouds of obscuring dust and gas. But in this stunning vista, the Spitzer Space Telescope's infrared cameras, penetrate much of the dust revealing the stars of the crowded galactic center region. A mosaic of many smaller snapshots, the detailed, false-color image shows older, cool stars in bluish hues. Red and brown glowing dust clouds are associated with young, hot stars in stellar nurseries. The very center of the Milky Way has recently been found capable of forming newborn stars. The galactic center lies some 26,700 light-years away, toward the constellation Sagittarius. At that distance, this picture spans about 900 light-years.",
-      "stars": 15,
-      "image": "https://apod.nasa.gov/apod/image/2104/GalacticCore_SpitzerSchmidt_960.jpg"
+      "hdurl": "https://apod.nasa.gov/apod/image/2104/GalacticCore_SpitzerSchmidt_960.jpg",
+      "image": "image"
     },
     {
       "id": 2,
       "date": "2021-04-20",
       "explanation": "What's the best way to explore Mars? Perhaps there is no single best way, but a newly demonstrated method shows tremendous promise: flight. Powered flight has the promise to search vast regions and scout out particularly interesting areas for more detailed investigation.  Yesterday, for the first time, powered flight was demonstrated on Mars by a small helicopter named Ingenuity.  In the featured video, Ingenuity is first imaged by the Perseverance rover sitting quietly on the Martian surface.  After a few seconds, Ingenuity's long rotors begin to spin, and a few seconds after that -- history is made as Ingenuity actually takes off, hovers for a few seconds, and then lands safely.  More tests of Ingenuity's unprecedented ability are planned over the next few months.  Flight may help humanity better explore not only Mars, but Saturn's moon Titan over the next few decades.",
-      "stars": 0,
-      "image": "https://www.youtube.com/embed/wMnOo2zcjXA?rel=0"
+      "hdurl": "https://www.youtube.com/embed/wMnOo2zcjXA?rel=0",
+      "image": "video"
     },
     {
       "id": 3,
       "date": "2021-04-21",
       "explanation": "When galaxies collide -- what happens to their magnetic fields? To help find out, NASA pointed SOFIA, its flying 747, at galactic neighbor Centaurus A to observe the emission of polarized dust -- which traces magnetic fields.  Cen A's unusual shape results from the clash of two galaxies with jets powered by gas accreting onto a central supermassive black hole.  In the resulting featured image, SOFIA-derived magnetic streamlines are superposed on ESO (visible: white), APEX (submillimeter: orange), Chandra (X-rays: blue), and Spitzer (infrared: red) images. The magnetic fields were found to be parallel to the dust lanes on the outskirts of the galaxy but distorted near the center.  Gravitational forces near the black hole accelerate ions and enhance the magnetic field.  In sum, the collision not only combined the galaxies’ masses -- but amplified their magnetic fields.  These results provide new insights into how magnetic fields evolved in the early universe when mergers were more common.",
-      "stars": 0,
-      "image": "https://apod.nasa.gov/apod/image/2104/CenA_SofiaPlusB_2480.jpg"
+      "hdurl": "https://apod.nasa.gov/apod/image/2104/CenA_SofiaPlusB_2480.jpg",
+      "image": "image"
+    },
+    {
+      "date": "2017-07-19",
+      "explanation": "What created this unusual hill on Mars? Its history has become a topic of research, but its shape and two-tone structure makes it one of the more unusual hills that the robotic Curiosity rover on Mars has rolled near.  Dubbed Ireson Hill, the mound rises about 5 meters high and spans about 15 meters across.  Ireson Hill is located on the Bagnold Dune field on the slope of Mount Sharp in Gale Crater on Mars. The featured 41-image panorama has been horizontally compressed to include the entire hill. The image was taken on February 2 and released last week. Because Mars is moving behind the Sun as seen from the Earth, NASA will soon stop sending commands to its Martian orbiters and rovers until about August 1.    Explore the Universe: Random APOD Generator",
+      "hdurl": "https://apod.nasa.gov/apod/image/1707/IresonHill_Curiosity_6720.jpg",
+      "image": "image",
+      "id": 4
+    },
+    {
+      "date": "2013-09-17",
+      "explanation": "It is one of the most massive objects in the visible universe.  In this view from the Hubble Space Telescope's Advanced Camera for Surveys, Abell 1689 is seen to warp space as predicted by Einstein's theory of gravity -- deflecting light from individual galaxies which lie behind the cluster to produce multiple, curved images. The power of this enormous gravitational lens depends on its mass, but the visible matter, in the form of the cluster's yellowish galaxies, only accounts for about one percent of the mass needed to make the observed bluish arcing images of background galaxies. In fact, most of the gravitational mass required to warp space enough to explain this cosmic scale lensing is in the form of still mysterious dark matter. As the dominant source of Abell 1689's gravity, the dark matter's unseen presence is mapped out by the lensed arcs and distorted background galaxy images.  Surprisingly, close inspection of the above image has revealed the presence of over 100,000 globular star clusters in the galaxy cluster.   Today: Third anniversary of APOD on Facebook",
+      "hdurl": "https://apod.nasa.gov/apod/image/1309/abell1689_hubble_1280.jpg",
+      "image": "image",
+      "id": 5
+    },
+    {
+      "date": "2015-01-16",
+      "explanation": "Delivered by Saturn-bound Cassini, ESA's Huygens probe touched down on the ringed planet's largest moon Titan, ten years ago on January 14, 2005. These panels show fisheye images made during its slow descent by parachute through Titan's dense atmosphere.  Taken by the probe's descent imager/spectral radiometer instrument they range in altitude from 6 kilometers (upper left) to 0.2 kilometers (lower right) above the moon's surprisingly Earth-like surface of dark channels, floodplains, and bright ridges. But at temperatures near -290 degrees F (-180 degrees C), the liquids flowing across Titan's surface are methane and ethane, hydrocarbons rather than water. After making the most distant landing for a spacecraft from Earth, Huygens transmitted data for more than an hour.  The Huygens data and a decade of exploration by Cassini have shown Titan to be a tantalizing world hosting a complex chemistry of organic compounds, dynamic landforms, lakes, seas, and a possible subsurface ocean of liquid water.",
+      "hdurl": "https://apod.nasa.gov/apod/image/1501/PIA08112_4panelcrop.jpg",
+      "image": "image",
+      "id": 6
+    },
+    {
+      "date": "2010-10-15",
+      "explanation": "Drifting through the one-horned constellation Monoceros, these dusty streamers and new born stars are part of the active Monoceros R2 star-forming region, embedded in a giant molecular cloud. The cosmic scene was recorded by the VISTA survey telescope in near-infrared light. Visible light images show dusty NGC 2170, seen here just right of center, as a complex of bluish reflection nebulae. But this penetrating near-infrared view reveals telltale signs of ongoing star formation and massive young stars otherwise hidden by the dust. Energetic winds and radiation from the hot young stars reshape the natal interstellar clouds. Close on the sky to the star-forming Orion Nebula, the Monoceros R2 region is almost twice as far away, about 2700 light-years distant. At that distance, this vista spans about 80 light-years.",
+      "hdurl": "https://apod.nasa.gov/apod/image/1010/ngc2170_vista.jpg",
+      "image": "image",
+      "id": 7
+    },
+    {
+      "date": "2021-03-15",
+      "explanation": "Yes, but have you ever heard a meteor? Usually, meteors are too far away to make any audible sound.  However, a meteor will briefly create an ionization trail that can reflect a distant radio signal. If the geometry is right, you may momentarily hear -- through your radio -- a distant radio station even over static.  In the featured video, the sounds of distant radio transmitters were caught reflecting from large meteor trails by a sensitive radio receiver -- at the same time the bright streaks were captured by an all-sky video camera. In the video, the  bright paths taken by four fireballs across the sky near Lamy, New Mexico, USA, are shown first.  Next, after each static frame, a real-time video captures each meteor streaking across the sky, now paired with the sound recorded from its radio reflection.  Projecting a meteor trail down to the Earth may lead to finding its impact site (if any), while projecting its trail back into the sky may lead to identifying its parent comet or asteroid.   Almost Hyperspace: Random APOD Generator",
+      "image": "video",
+      "id": 8
     }
   ],
   "comments": [
     {
       "id": 1,
       "imageId": 1,
-      "name": "Betsy",
       "content": "Cool Image"
     },
     {
       "id": 2,
       "imageId": 1,
-      "name": "Nancy",
       "content": "Those are some pretty colors"
     }
   ]
