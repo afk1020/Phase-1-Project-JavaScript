@@ -14,6 +14,9 @@ function renderData(localData){
     
      document.querySelector(".date-form").addEventListener('submit',()=>{
       event.preventDefault()  
+      console.log(event.target)
+     
+    
      let newDate = {
         "date":event.target.name.value,
         "explanation": event.target.name.value,
