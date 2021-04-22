@@ -1,20 +1,21 @@
-
-document.querySelector('form').addEventListener('submit',nasa)
-console.log('works')
+document.querySelector('.date-form').addEventListener('submit',nasa)
 
 function nasa(event){
     event.preventDefault()
-    console.log(event.target)
-let date = document.querySelector('.date-input').value
-console.log(date)
+    let date = document.querySelector('.date-input').value
+
 fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=2XLVBt8SC09b9rI2nxK0qwhhGw9kCt1e9ZoTaJc9`)
     .then(res=> res.json())
     .then(nasaData => {
-        console.log(nasaData)
 
-        document.querySelector('.title').innerText = nasaData.title;
+        let nasaTitle = document.querySelector('.title')
+        nasaTitle.innerText = nasaData.title;
+
+        let nasaDate = document.querySelector('.date-2')
+        nasaDate.innerText = nasaData.date;
+
         if(nasaData.media_type == "image"){
-             document.querySelector('.image').src = nasaData.hdurl;
+             document.querySelector('.image').src = nasaData.url;
         }
         else{
         let embed = document.querySelector('embed')
@@ -22,100 +23,117 @@ fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=2XLVBt8SC09b9rI2
             embed.style.display = "block"
         }
         document.querySelector('.explanation').innerText = nasaData.explanation;
-        })
-}      
+        
+    document.querySelector(".add-an-image").addEventListener('submit',(e)=>{
+        e.preventDefault()
+           let newNasa = {
+            date: nasaData.date,
+            explanation: nasaData.explanation,
+            url: nasaData.url,
+            image: nasaData.media_type
+           };
+           console.log("works")
+           postNasa(newNasa);
+           console.log("works")
+           nasa(newNasa);
+       });
+    })
 
-
-const localURL ="http://localhost:3000/images"
-fetch(localURL)
-.then(res => res.json())
-.then(localData => {renderData(localData)
-    console.log(localData)})
-
-function renderData(localData){
-    
-     document.querySelector(".date-form").addEventListener('submit',()=>{
-      event.preventDefault()  
-      console.log(event.target)
-     
-    
-     let newDate = {
-        "date":event.target.name.value,
-        "explanation": event.target.name.value,
-        "stars": "0",
-        "image": event.target.name.value
-    }
-        console.log(newDate)
-     
-
-     let stars = document.querySelector(".stars")
-     stars.innerText = localData[0].stars +" stars"
-     // needs to be dynamic
-   
-     
-
-    document.querySelector(".stars-button").addEventListener("click",()=>{
-        let count = parseInt(stars.innerText)
-        ++ count
-        stars.innerText = count + " stars"
-    
-    let starsUpdate ={
-        "stars":count
+function postNasa(card){
+    let newURL = "http://localhost:3000/images/"
+    let options ={
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body:JSON.stringify(card),
     };
-    patchImage(starsUpdate);
-
-    })
-    document.querySelector(".comment-form").addEventListener('submit',()=>{
-        event.preventDefault()
-        let newComment = document.querySelector(".comment-input").value
-        const ul = document.querySelector(".comments")
-        const li = document.createElement('li')
-        const text = document.createTextNode(newComment)
-        li.append(text)
-        ul.append(li)
-console.log("works")
-    patchComment(newComment)
-    })
-})
+    fetch(newURL, options)
+    .then((response)=>response.json())
+    .then((postedCard)=>nasa(postedCard));
+} 
+ 
 }
 
 
-function postImage(localData){
+imageURL= "http://localhost:3000/images/"
+fetch(imageURL)
+.then((response)=>response.json())
+.then(handleData)
+
+function handleData(cards){
+    cards.forEach(renderNasa)
+}
+
+function renderNasa(nasaCard){
+    const childDiv = document.createElement('div')
+    childDiv.className ="card"
+    document.querySelector('#nasa-collection').appendChild(childDiv)
     
-    newURL2 = "http://localhost:3000/comments/1" 
+    let h2 = document.createElement('h2')
+    h2.innerText =nasaCard.date
+    console.log(nasaCard.date)
+
+    let img = document.createElement('img')
+    img.className = "image-avatar"
+    let embed = document.createElement('embed')
+
+    if(nasaCard.image == "image"){
+        img.src = nasaCard.url;
+   }
+   else{
+   
+       embed.src = nasaCard.url
+       embed.style.display = "block"
+   }
+    const line = document.createElement('li')
+    line.innerText = nasaCard.comments
+
+    let form = document.createElement('form')
+    form.className="submit-form"
+
+    let input = document.createElement('input')
+    input.className = "input-comment"
+    input.type ="text"
+    input.name = "comment"
+    form.append(input)
+
+    let btn = document.createElement('button')
+    btn.innerText = "post"
+    btn.type="submit"
+    
+    childDiv.append(h2,img,embed,line,form,btn);
+
+    btn.addEventListener('submit',(event)=>{
+            event.preventDefault()
+            let newComment = document.createElement('.submit-form').value
+            const line2 = document.createElement('li')
+            const text = document.createTextNode(newComment)
+            line2.append(text)
+            
+            console.log("works")
+    })
+            
+    
+    
+
+}
+postNasa(renderNasa)
+
+function postComment(commentCard){
+    
+    newURL2 = "http://localhost:3000/comments/" 
     let optionsPost={
         method: "POST",
         headers:{
             "Content-Type": "application/json",
             Accept: "application/json",
         },
-        body: JSON.stringify(localData)
+        body: JSON.stringify(commentCard)
         };
 
 fetch(newURL2, optionsPost);
-};
-function patchImage(starsUpdate){
-    newURL = "http://localhost:3000/images/1" //changed url to feature id of 1, needs to be dynamic
-    let optionPatch ={
-        method: 'PATCH',
-        headers: {
-            "Content-Type":"application/json",
-            Accept: "application/json",
-        },
-        body: JSON.stringify(starsUpdate)
-    }
-    fetch(newURL, optionPatch);
-};
-function patchComment(newComment){
-    newURL = "http://localhost:3000/comments/" //changed url to feature id of 1, needs to be dynamic
-    let optionPatch ={
-        method: 'PATCH',
-        headers: {
-            "Content-Type":"application/json",
-            Accept: "application/json",
-        },
-        body: JSON.stringify(newComment)
-    }
-    fetch(newURL, optionPatch);
- }
 
+};
+postComment(renderNasa)

@@ -1,1 +1,113 @@
-
+.main-body{
+    position: relative;
+}
+.left-display{
+    position: absolute;
+    left: 0;
+    width: 50vw;
+}
+.picture-container{
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 60vw;
+}
+.nasa-collection{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 60vw;
+}
+.card{
+    width: 100px;
+    border: 5px solid white;
+}
+.logo{
+    display: block;
+    margin-left: 11%;
+    margin-right: auto;
+    width: 80%;
+    height: 50%;
+}
+.date-input{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+}
+.submit{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 25px;
+    font-size: 15px;
+}
+h2{
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    height: auto;
+    color: white;
+}
+.image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: auto
+}
+.explanation{
+    color:white;
+    margin: 0px 100px 10px;
+    font-size: 20px;
+}
+.video{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+.nasa-avatar {
+    justify-self:center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    width: 50%;
+    height: 50%;
+}
+h3 {
+    display: block;
+    text-align: center;
+    margin: 100px;
+    font-size: 50px;
+    color: white;
+}
+html { 
+    background: url(http://i.imgur.com/dKr9W.jpg) no-repeat center center fixed; 
+    background-size: cover;
+  }
+​
+.NITD{
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+}
+section{
+    display: table-caption;
+}
+.database{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 25px;
+    text-align: center;
+    font-size: 20px;
+}
