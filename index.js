@@ -1,5 +1,4 @@
-
-document.querySelector('form').addEventListener('submit',nasa)
+document.querySelector('.date-form').addEventListener('submit',nasa)
 
 function nasa(event){
     event.preventDefault()
@@ -16,7 +15,7 @@ fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=2XLVBt8SC09b9rI2
         nasaDate.innerText = nasaData.date;
 
         if(nasaData.media_type == "image"){
-             document.querySelector('.image').src = nasaData.hdurl;
+             document.querySelector('.image').src = nasaData.url;
         }
         else{
         let embed = document.querySelector('embed')
@@ -39,7 +38,7 @@ fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=2XLVBt8SC09b9rI2
            nasa(newNasa);
        });
     })
-    
+
 function postNasa(card){
     let newURL = "http://localhost:3000/images/"
     let options ={
@@ -55,7 +54,7 @@ function postNasa(card){
     .then((postedCard)=>nasa(postedCard));
 } 
  
-};
+}
 
 
 imageURL= "http://localhost:3000/images/"
@@ -77,11 +76,8 @@ function renderNasa(nasaCard){
     console.log(nasaCard.date)
 
     let img = document.createElement('img')
+    img.className = "image-avatar"
     let embed = document.createElement('embed')
-    
-    let form = document.createElement('form')
-    form.innerText = nasaCard.content
-
 
     if(nasaCard.image == "image"){
         img.src = nasaCard.url;
@@ -91,54 +87,53 @@ function renderNasa(nasaCard){
        embed.src = nasaCard.url
        embed.style.display = "block"
    }
+    const line = document.createElement('li')
+    line.innerText = nasaCard.comments
+
+    let form = document.createElement('form')
+    form.className="submit-form"
+
+    let input = document.createElement('input')
+    input.className = "input-comment"
+    input.type ="text"
+    input.name = "comment"
+    form.append(input)
+
+    let btn = document.createElement('button')
+    btn.innerText = "post"
+    btn.type="submit"
     
-    childDiv.append(h2,img,embed);
+    childDiv.append(h2,img,embed,line,form,btn);
+
+    btn.addEventListener('submit',(event)=>{
+            event.preventDefault()
+            let newComment = document.createElement('.submit-form').value
+            const line2 = document.createElement('li')
+            const text = document.createTextNode(newComment)
+            line2.append(text)
+            
+            console.log("works")
+    })
+            
+    
+    
 
 }
 postNasa(renderNasa)
 
-//works up to this point
-
+function postComment(commentCard){
     
-// //     document.querySelector(".comment-form").addEventListener('submit',()=>{
-// //         event.preventDefault()
-// //         let newComment = document.querySelector(".comment-input").value
-// //         const ul = document.querySelector(".comments")
-// //         const li = document.createElement('li')
-// //         const text = document.createTextNode(newComment)
-// //         li.append(text)
-// //         ul.append(li)
-// // console.log("works")
-// //     patchComment(newComment)
-// //     })
-// }
+    newURL2 = "http://localhost:3000/comments/" 
+    let optionsPost={
+        method: "POST",
+        headers:{
+            "Content-Type": "application/json",
+            Accept: "application/json",
+        },
+        body: JSON.stringify(commentCard)
+        };
 
+fetch(newURL2, optionsPost);
 
-// function postImage(localData){
-    
-//     newURL2 = "http://localhost:3000/comments/" 
-//     let optionsPost={
-//         method: "POST",
-//         headers:{
-//             "Content-Type": "application/json",
-//             Accept: "application/json",
-//         },
-//         body: JSON.stringify(localData)
-//         };
-
-// fetch(newURL2, optionsPost);
-// };
-
-// function patchComment(newComment){
-//     newURL = "http://localhost:3000/comments/" //changed url to feature id of 1, needs to be dynamic
-//     let optionPatch ={
-//         method: 'PATCH',
-//         headers: {
-//             "Content-Type":"application/json",
-//             Accept: "application/json",
-//         },
-//         body: JSON.stringify(newComment)
-//     }
-//     fetch(newURL, optionPatch);
-//  }
-
+};
+postComment(renderNasa)
