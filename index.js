@@ -56,7 +56,7 @@ function postNasa(card){
 } 
  
 };
-//works up to this point
+
 
 imageURL= "http://localhost:3000/images/"
 fetch(imageURL)
@@ -78,8 +78,9 @@ function renderNasa(nasaCard){
 
     let img = document.createElement('img')
     let embed = document.createElement('embed')
-    // img.src= nasaCard.hdurl
-    // img.className = "nasa-avatar"
+    
+    let form = document.createElement('form')
+    form.innerText = nasaCard.content
 
 
     if(nasaCard.image == "image"){
@@ -96,40 +97,7 @@ function renderNasa(nasaCard){
 }
 postNasa(renderNasa)
 
-// const localURL ="http://localhost:3000/images"
-// fetch(localURL)
-// .then(res => res.json())
-// .then(localData => {renderData(localData)
-//     console.log(localData)})
-
-// function renderData(localData){
-    
-//      document.querySelector(".date-form").addEventListener('submit',()=>{
-//       event.preventDefault()  
-//       console.log(event.target)
-     
-    
-//      let newDate = {
-//         "date":event.target.name.value,
-//         "explanation": event.target.name.value,
-//         "stars": "0",
-//         "image": event.target.name.value
-//     }
-//         console.log(newDate)
-     
-//     })
-   
-     
-
-//     // document.querySelector(".stars-button").addEventListener("click",()=>{
-//     //     let count = parseInt(stars.innerText)
-//     //     ++ count
-//     //     stars.innerText = count + " stars"
-    
-//     // let starsUpdate ={
-//     //     "stars":count
-//     // };
-//     // patchImage(starsUpdate);
+//works up to this point
 
     
 // //     document.querySelector(".comment-form").addEventListener('submit',()=>{
@@ -148,7 +116,7 @@ postNasa(renderNasa)
 
 // function postImage(localData){
     
-//     newURL2 = "http://localhost:3000/comments/1" 
+//     newURL2 = "http://localhost:3000/comments/" 
 //     let optionsPost={
 //         method: "POST",
 //         headers:{
@@ -160,18 +128,7 @@ postNasa(renderNasa)
 
 // fetch(newURL2, optionsPost);
 // };
-// function patchImage(starsUpdate){
-//     newURL = "http://localhost:3000/images/1" //changed url to feature id of 1, needs to be dynamic
-//     let optionPatch ={
-//         method: 'PATCH',
-//         headers: {
-//             "Content-Type":"application/json",
-//             Accept: "application/json",
-//         },
-//         body: JSON.stringify(starsUpdate)
-//     }
-//     fetch(newURL, optionPatch);
-// };
+
 // function patchComment(newComment){
 //     newURL = "http://localhost:3000/comments/" //changed url to feature id of 1, needs to be dynamic
 //     let optionPatch ={
