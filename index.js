@@ -30,7 +30,7 @@ fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=2XLVBt8SC09b9rI2
            let newNasa = {
             date: nasaData.date,
             explanation: nasaData.explanation,
-            hdurl: nasaData.hdurl,
+            url: nasaData.url,
             image: nasaData.media_type
            };
            console.log("works")
@@ -77,19 +77,21 @@ function renderNasa(nasaCard){
     console.log(nasaCard.date)
 
     let img = document.createElement('img')
-    img.src= nasaCard.hdurl
-    img.className = "nasa-avatar"
+    let embed = document.createElement('embed')
+    // img.src= nasaCard.hdurl
+    // img.className = "nasa-avatar"
 
-//     if(nasaCard.image == "image"){
-//         document.querySelector('.image').src = nasaCard.hdurl;
-//    }
-//    else{
-//    let embed = document.querySelector('embed')
-//        embed.src = nasaCard.url
-//        embed.style.display = "block"
-//    }
+
+    if(nasaCard.image == "image"){
+        img.src = nasaCard.url;
+   }
+   else{
+   
+       embed.src = nasaCard.url
+       embed.style.display = "block"
+   }
     
-    childDiv.append(h2,img);
+    childDiv.append(h2,img,embed);
 
 }
 postNasa(renderNasa)
