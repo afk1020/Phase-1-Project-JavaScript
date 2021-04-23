@@ -32,9 +32,9 @@ fetch(`https://api.nasa.gov/planetary/apod?date=${date}&api_key=2XLVBt8SC09b9rI2
             url: nasaData.url,
             image: nasaData.media_type
            };
-           console.log("works")
+           
            postNasa(newNasa);
-           console.log("works")
+           
            nasa(newNasa);
        });
     })
