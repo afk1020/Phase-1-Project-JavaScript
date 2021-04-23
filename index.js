@@ -87,33 +87,33 @@ function renderNasa(nasaCard){
        embed.src = nasaCard.url
        embed.style.display = "block"
    }
-    const line = document.createElement('li')
-    line.innerText = nasaCard.comments
+    // const line = document.createElement('li')
+    // line.innerText = nasaCard.comments
 
-    let form = document.createElement('form')
-    form.className="submit-form"
+    // let form = document.createElement('form')
+    // form.className="submit-form"
 
-    let input = document.createElement('input')
-    input.className = "input-comment"
-    input.type ="text"
-    input.name = "comment"
-    form.append(input)
+    // let input = document.createElement('input')
+    // input.className = "input-comment"
+    // input.type ="text"
+    // input.name = "comment"
+    // form.append(input)
 
-    let btn = document.createElement('button')
-    btn.innerText = "post"
-    btn.type="submit"
+    // let btn = document.createElement('button')
+    // btn.innerText = "post"
+    // btn.type="submit"
     
-    childDiv.append(h2,img,embed,line,form,btn);
+    childDiv.append(h2,img,embed);
 
-    btn.addEventListener('submit',(event)=>{
-            event.preventDefault()
-            let newComment = document.createElement('.submit-form').value
-            const line2 = document.createElement('li')
-            const text = document.createTextNode(newComment)
-            line2.append(text)
+    // btn.addEventListener('submit',(event)=>{
+    //         event.preventDefault()
+    //         let newComment = document.createElement('.submit-form').value
+    //         const line2 = document.createElement('li')
+    //         const text = document.createTextNode(newComment)
+    //         line2.append(text)
             
-            console.log("works")
-    })
+    //         console.log("works")
+    // })
             
     
     
@@ -121,19 +121,19 @@ function renderNasa(nasaCard){
 }
 postNasa(renderNasa)
 
-function postComment(commentCard){
+// function postComment(commentCard){
     
-    newURL2 = "http://localhost:3000/comments/" 
-    let optionsPost={
-        method: "POST",
-        headers:{
-            "Content-Type": "application/json",
-            Accept: "application/json",
-        },
-        body: JSON.stringify(commentCard)
-        };
+//     newURL2 = "http://localhost:3000/comments/" 
+//     let optionsPost={
+//         method: "POST",
+//         headers:{
+//             "Content-Type": "application/json",
+//             Accept: "application/json",
+//         },
+//         body: JSON.stringify(commentCard)
+//         };
 
-fetch(newURL2, optionsPost);
+// fetch(newURL2, optionsPost);
 
-};
-postComment(renderNasa)
+// };
+// postComment(renderNasa)
