@@ -83,6 +83,27 @@
       "url": "https://apod.nasa.gov/apod/image/2102/StarshipsMoon_Kraus_1080.jpg",
       "image": "image",
       "id": 16
+    },
+    {
+      "date": "2020-03-16",
+      "explanation": "Why does Saturn appear so big? It doesn't -- what is pictured are foreground clouds on Earth crossing in front of the Moon. The Moon shows a slight crescent phase with most of its surface visible by reflected Earthlight known as ashen glow. The Sun directly illuminates the brightly lit lunar crescent from the bottom, which means that the Sun must be below the horizon and so the image was taken before sunrise.  This double take-inducing picture was captured on 2019 December 24, two days before the Moon slid in front of the Sun to create a solar eclipse. In the foreground, lights from small Guatemalan towns are visible behind the huge volcano Pacaya.   Follow APOD in English on: Instagram, Facebook,  Reddit, or Twitter",
+      "url": "https://apod.nasa.gov/apod/image/2003/SaturnMoon_Sojuel_960.jpg",
+      "image": "image",
+      "id": 17
+    },
+    {
+      "date": "2014-12-07",
+      "explanation": "Northern Lights, or aurora borealis, haunted skies over the island of Kvaløya, near Tromsø Norway on 2009 December 13. This 30 second long exposure records their shimmering glow gently lighting the wintery coastal scene. A study in contrasts, it also captures the sudden flash of a fireball meteor from the excellent Geminid meteor shower in 2009 December. Streaking past familiar stars in the handle of the Big Dipper, the trail points back toward the constellation Gemini, off the top of the view. Both aurora and meteors occur in Earth's upper atmosphere at altitudes of 100 kilometers or so, but aurora caused by energetic charged particles from the magnetosphere, while meteors are trails of cosmic dust. Toward the end of this week the 2014 Geminids meteor shower will peak, although they will compete with the din of last quarter moonlight.   Now Available: APOD 2015 Wall Calendars",
+      "url": "https://apod.nasa.gov/apod/image/1412/GeminidAurora_Hansen1_960.jpg",
+      "image": "image",
+      "id": 18
+    },
+    {
+      "date": "2006-10-07",
+      "explanation": "This historic all-sky map is based on the first two years of data from NASA's COsmic Background Explorer (COBE) satellite, launched in November of 1989. The map shows minute temperature variations (red is hotter) imprinted on the Cosmic Microwave Background (CMB) radiation by structures in the early Universe. These detailed measurements of the CMB and other COBE results ushered in an age of precision cosmology, and exactly confirmed the predictions of the Big Bang theory. Playing leading roles in the COBE project, for their resulting discoveries John C. Mather (NASA, Goddard Space Flight Center), and George F. Smoot (UC Berkeley) were selected to receive the 2006 Nobel Prize in Physics.",
+      "url": "https://apod.nasa.gov/apod/image/0610/cmb_cobe2yr_c71.jpg",
+      "image": "image",
+      "id": 19
     }
   ],
   "comments": [
